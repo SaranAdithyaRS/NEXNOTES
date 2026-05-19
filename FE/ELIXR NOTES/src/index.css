@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Base Styles */
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 34rem),
+      linear-gradient(135deg, #ffffff 0%, #f4f4f5 46%, #e5e7eb 100%);
+    color: #18181b;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+/* Reusable Components */
+@layer components {
+  .input-box {
+    @apply w-full text-sm bg-white border border-zinc-200 px-5 py-3 rounded-lg mb-4 outline-none text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-4 focus:ring-zinc-100 transition;
+  }
+
+  .btn-primary {
+    @apply w-full text-sm font-semibold bg-zinc-950 text-white p-3 rounded-lg my-1 hover:bg-zinc-800 active:scale-[0.99] transition duration-200 shadow-sm;
+  }
+
+  .icon-btn {
+    @apply text-xl text-zinc-400 cursor-pointer hover:text-zinc-950 transition;
+  }
+
+  .input-label {
+    @apply text-[11px] font-semibold tracking-[0.18em] uppercase text-zinc-500;
+  }
+}
